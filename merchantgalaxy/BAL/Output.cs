@@ -7,9 +7,9 @@ using System.Text;
 
 namespace merchantgalaxy.BAL
 {
-    class Output : IOutput
+    public class Output : IOutput
     {
-        public void displayPoints(string lines, AliasMapper aliasMapper, RomanConverter converter)
+        public void  displayPoints(string lines, AliasMapper aliasMapper, RomanConverter converter)
         {
             string[] parts = lines.Split(new string[] { " is " }, StringSplitOptions.RemoveEmptyEntries);
             string[] wordsInFirstPart = parts[0].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -33,7 +33,7 @@ namespace merchantgalaxy.BAL
 
         }
 
-        public void displayCredits(string lines, AliasMapper aliasMapper, RomanConverter converter,CommodityIndex  commodityIndex)
+        public void  displayCredits(string lines, AliasMapper aliasMapper, RomanConverter converter, CommodityIndex commodityIndex)
         {
             //Console.WriteLine("Code here to print glob prok Silver is 68 Credits");
             string input = lines.Substring(0, lines.Length - 1);
@@ -55,5 +55,6 @@ namespace merchantgalaxy.BAL
             Console.WriteLine(String.Format("\n{0}is {1} Credits", parts[1], totalUnits.Value * commodityIndex.GetPriceByCommodity(commodity)));
 
         }
+
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace merchantgalaxy.Interfaces
 {
-    interface IOutput
+    public interface IOutput
     {
-        public void displayPoints(string lines, AliasMapper aliasMapper, RomanConverter converter);
-        public void displayCredits(string lines, AliasMapper aliasMapper, RomanConverter converter, CommodityIndex commodityIndex);
+          void displayPoints(string lines, AliasMapper aliasMapper, RomanConverter converter);
+          void displayCredits(string lines, AliasMapper aliasMapper, RomanConverter converter, CommodityIndex commodityIndex);
     }
 }

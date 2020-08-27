@@ -5,7 +5,7 @@ using System.Text;
 
 namespace merchantgalaxy.Classes
 {
-    class CommodityIndex : IValidate
+    public class CommodityIndex : IValidate
     {
         private Dictionary<string, double> commodityMap;
         public CommodityIndex()

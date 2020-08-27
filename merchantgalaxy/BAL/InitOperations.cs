@@ -6,14 +6,19 @@ using System.Text;
 
 namespace merchantgalaxy.BAL
 {
-    class InitOperations
+    public class InitOperations
     {
         public void AddAlias(string lines, AliasMapper aliasMapper)
         {
-            string[] alies = lines.Split(new string[] { " is " }, StringSplitOptions.RemoveEmptyEntries);
-            string roman = alies[1];
-
-            aliasMapper.AddAlias(alies[0], alies[1]);
+            if (lines.Contains("is"))
+            {
+                string[] alies = lines.Split(new string[] { " is " }, StringSplitOptions.RemoveEmptyEntries);
+                if(alies.Length  == 2 && alies[1] != "")
+                {
+                    string roman = alies[1];
+                    aliasMapper.AddAlias(alies[0], alies[1]);
+                }
+            }
         }
         public void AddCommodity(string lines, AliasMapper aliasMapper, RomanConverter converter, CommodityIndex commodityIndex)
         {

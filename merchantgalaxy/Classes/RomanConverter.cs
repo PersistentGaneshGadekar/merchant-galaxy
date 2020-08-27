@@ -4,7 +4,7 @@ using System.Text;
 
 namespace merchantgalaxy.Classes
 {
-    class RomanConverter
+    public class RomanConverter
     {
         Dictionary<string, int> romanToDecimalMapper;
 

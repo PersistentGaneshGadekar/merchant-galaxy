@@ -5,7 +5,7 @@ using System.Text;
 
 namespace merchantgalaxy.Classes
 {
-    class AliasMapper : IValidate
+    public class AliasMapper : IValidate
     {
         private Dictionary<string, string> aliasMap;
 

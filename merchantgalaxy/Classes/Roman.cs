@@ -4,7 +4,7 @@ using System.Text;
 
 namespace merchantgalaxy.Classes
 {
-    class Roman
+    public class Roman
     {
         private static string alphabet = "IVXLCDM";
         public static string GetAlphabet()
