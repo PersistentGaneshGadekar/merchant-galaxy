@@ -1,5 +1,5 @@
 ﻿using merchantgalaxy.Interfaces;
-using mygalaxy.Classes;
+using merchantgalaxy.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;

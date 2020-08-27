@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace mygalaxy.Classes
+namespace merchantgalaxy.Classes
 {
     class AliasMapper : IValidate
     {
