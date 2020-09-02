@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using merchantgalaxy.BAL;
+using System.IO;
+
 namespace MerchantGalaxyTest
 {
     public class FileOperationsTests
@@ -24,7 +26,17 @@ namespace MerchantGalaxyTest
             FileOperations fileOperations = new FileOperations();
             string[] actual = fileOperations.getInputFile(path);
             //assert
-            Assert.True(actual ==  null);
+            Assert.True(actual == null);
         }
+
+        //[Fact]
+        //public void getInputFile_FailTest()
+        //{
+        //    string path = @"C:\Users\user\Desktop\data__.txt";
+        //    FileOperations fileOperations = new FileOperations();
+        //    string[] actual = fileOperations.getInputFile(path);
+        //    //assert
+        //    Assert.Throws<FileNotFoundException>(() => fileOperations.getInputFile(path));
+        //}
     }
 }

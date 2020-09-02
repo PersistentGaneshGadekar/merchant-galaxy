@@ -10,12 +10,13 @@ namespace merchantgalaxy
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string path = @"C:\Users\user\Desktop\data.txt";
             FileOperations fileOperations = new FileOperations();
-            string[] lines = fileOperations.getInputFile(path);
-
+            string[] lines = fileOperations.GetInputFile(path);
+            try
+            {
             RomanConverter converter = new RomanConverter();
             //Dictionary<string, int> dictionaryRoman = converter.getRomanConverter();
             AliasMapper aliasMapper = new AliasMapper();
@@ -53,8 +54,13 @@ namespace merchantgalaxy
                 Dictionary<string, string> dictionaryaliasMapper = aliasMapper.getAliasMapper();
                 Dictionary<string, double> dictionaryCommodityIndex = commodityIndex.getCommodityIndex();
             }
-         
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             Console.WriteLine("\n--- Output End ---");
+            Console.ReadLine();
         }
     }
 }

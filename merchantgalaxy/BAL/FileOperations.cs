@@ -7,7 +7,7 @@ namespace merchantgalaxy.BAL
 {
     public class FileOperations
     {
-        public string[] getInputFile(string path)
+        public string[] GetInputFile(string path)
         {
             string[] lines =  null;
             if (File.Exists(path))
@@ -17,6 +17,9 @@ namespace merchantgalaxy.BAL
                 Console.WriteLine("--- Input Start ---");
                 Console.WriteLine(readText);
                 Console.WriteLine("--- Input End ---");
+            }else
+            {
+               // throw new FileNotFoundException();
             }
             
             return lines;
